@@ -3,13 +3,17 @@ body {
     text-align: center;
     background: url('/img/poker.jpg') no-repeat center center fixed;
     background-size: cover;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+
 
 }
 
-p { 
+p {
     font-size: 24px;
     text-align: center;
-    color: white;
+    color: #C7E1EE;
 }
 
 h1 {
@@ -31,5 +35,6 @@ button {
     font-weight: bold;
     border: none;
     border-radius: 2px;
+    margin: 2px;
 }
 
