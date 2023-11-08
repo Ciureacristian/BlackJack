@@ -26,12 +26,18 @@ function getRandomCard() {
 }
 
 function startGame() {
-  isAlive = true;
-  let firstCard = getRandomCard();
-  let secondCard = getRandomCard();
-  cards = [firstCard, secondCard];
-  sum = firstCard + secondCard;
-  renderGame();
+  if (player.chips >= 10) {
+    isAlive = true;
+    let firstCard = getRandomCard();
+    let secondCard = getRandomCard();
+    cards = [firstCard, secondCard];
+    sum = firstCard + secondCard;
+    player.chips -= 10;
+    playerEl.textContent = player.name + ': $' + player.chips;
+    renderGame();
+  } else {
+    messageEl.textContent = "You don't have enough chips to play!";
+  }
 }
 
 function renderGame() {
